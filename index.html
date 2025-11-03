@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rent Cars</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gradient-to-b from-white to-gray-100">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-5 shadow-sm bg-white sticky top-0 z-50">
+    <h1 class="text-2xl font-bold text-gray-900">Rent<span class="text-blue-500">Cars</span></h1>
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a href="#home" class="hover:text-orange-500 transition-colors">Home</a></li>
+      <li><a href="#works" class="hover:text-orange-500 transition-colors">How It Works</a></li>
+      <li><a href="#service" class="hover:text-orange-500 transition-colors">Services</a></li>
+      <li><a href="#ride" class="hover:text-orange-500 transition-colors">Our Fleet</a></li>
+      <li><a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a></li>
+    </ul>
+    <div class="hidden md:flex space-x-4">
+      <button class="px-5 py-2 border border-gray-400 rounded-md text-gray-700 hover:bg-gray-100 transition-colors">Sign Up</button>
+      <button class="px-5 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors">Sign In</button>
+    </div>
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menu-overlay" class="menu-overlay"></div>
+
+  <!-- Mobile Menu - COMPLETELY FIXED -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="p-6">
+      <!-- Header with close button -->
+      <div class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4">
+        <h1 class="text-2xl font-bold text-gray-900">Rent<span class="text-blue-500">Cars</span></h1>
+        <button id="close-menu" class="text-gray-600 hover:text-orange-500 p-2 rounded-lg hover:bg-gray-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="space-y-4 mb-8">
+        <a href="#home" class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Home</a>
+        <a href="#works" class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">How It Works</a>
+        <a href="#service" class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Services</a>
+        <a href="#ride" class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Our Fleet</a>
+        <a href="#contact" class="block py-3 px-4 text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Contact</a>
+      </div>
+
+      <!-- Auth Buttons -->
+      <div class="space-y-3 border-t border-gray-200 pt-6">
+        <button class="w-full px-4 py-3 border border-gray-400 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors font-medium">Sign Up</button>
+        <button class="w-full px-4 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium">Sign In</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rest of your content remains exactly the same -->
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between px-8 md:px-20 py-16">
+    <!-- Left Text -->
+    <div class="text-center md:text-left max-w-lg" data-aos="fade-right">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        Looking to save more<br> on your rental car?
+      </h2>
+      <div class="h-1 w-12 bg-orange-500 mt-4 mb-6 mx-auto md:mx-0"></div>
+      <p class="text-gray-600 mb-6">
+        Discover Rental  car rental options in India with Rent a Car. 
+        Select from a range of car options and local specials.
+      </p>
+
+      <!-- CTA Button -->
+      <button class="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-all transform hover:-translate-y-1 shadow-lg">
+        🚘 Book a Ride
+      </button>
+
+      <!-- Store Buttons -->
+      <div class="flex justify-center md:justify-start space-x-4 mt-6">
+        <a href="#">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+               alt="App Store" class="h-10 hover:scale-105 transition-transform">
+        </a>
+        <a href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+               alt="Google Play" class="h-10 hover:scale-105 transition-transform">
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Car Image -->
+    <div class="relative w-full md:w-1/2 flex justify-center mb-10 md:mb-0" data-aos="fade-left">
+      <div class="bg-orange-100 rounded-2xl p-4 md:p-8 w-80 md:w-96 h-60 md:h-80 flex items-center justify-center shadow-xl">
+        <img id="car-img" 
+             src="https://dealerinspire-image-library-prod.s3.us-east-1.amazonaws.com/images/Kk8LJpoZ2HeVdPL9jNop1bzuh9bN48kG9QuwV558.png" 
+             alt="Jeep Car"
+             class="w-full h-auto drop-shadow-2xl opacity-0">
+      </div>
+    </div>
+  </section>
+      
+  <section class="py-12 bg-gray-200 shadow-lg rounded-xl max-w-5xl mx-auto -mt-10 relative z-10 px-6" data-aos="fade-up">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900">Book Your Ride</h2>
+      <p class="text-gray-600 mt-2">Find the perfect car for your journey</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-2">Pick-up Location</label>
+        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Enter location">
+      </div>
+      
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-2">Pick-up Date</label>
+        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+      </div>
+      
+      <div>
+        <label class="block text-gray-700 text-sm font-medium mb-2">Return Date</label>
+        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+      </div>
+      
+      <div class="flex items-end">
+        <button class="w-full px-4 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+          Search Cars
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of your sections continue exactly as before -->
+  <!-- HOW IT WORKS Section -->
+  <section class="text-center py-20 bg-white"  id="works">
+    <h2 class="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">How It Works</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+      Renting a car has never been easier. Follow these simple steps and enjoy your ride with RentalX.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 md:px-20">
+      <!-- Step 1 -->
+      <div class="bg-gray-50 shadow-lg rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up">
+        <div class="text-orange-500 text-5xl mb-4">🚗</div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Choose Your Car</h3>
+        <p class="text-gray-600">
+          Browse our wide selection of vehicles and pick the perfect car that suits your needs and budget.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-gray-50 shadow-lg rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-orange-500 text-5xl mb-4">📅</div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Make a Booking</h3>
+        <p class="text-gray-600">
+          Select your preferred dates, location, and complete the booking process in just a few clicks.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-gray-50 shadow-lg rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+        <div class="text-orange-500 text-5xl mb-4">😎</div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Enjoy Your Ride</h3>
+        <p class="text-gray-600">
+          Get behind the wheel and enjoy a seamless, comfortable journey with RentalX support at every step.
+        </p>
+      </div>
+    </div>
+  </section>
+   
+  <!-- BEST SERVICES SECTION -->
+  <section class="py-20 bg-white" id="service">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-10 gap-12">
+      <!-- Left Car Image -->
+      <div class="md:w-1/2 flex justify-center fade-in">
+        <img src="https://imgd-ct.aeplcdn.com/664x415/n/zqtsa9b_1783645.jpg?q=80" alt="Car" class="rounded-lg shadow-lg">
+      </div>
+
+      <!-- Right Text Content -->
+      <div class="md:w-1/2 fade-in space-y-6">
+        <h4 class="uppercase text-gray-500 tracking-widest text-sm">Best Services</h4>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
+          Feel the best experience with <br> our rental deals
+        </h2>
+
+        <!-- Feature 1 -->
+        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="bg-orange-100 p-3 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c.828 0 1.5.672 1.5 1.5S12.828 11 12 11s-1.5-.672-1.5-1.5S11.172 8 12 8z M12 13v5" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a7 7 0 1114 0A7 7 0 015 12z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Deals for every budget</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">From economy cars to luxury vehicles, we have something for everyone, ensuring you get the best value for your money.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="bg-orange-100 p-3 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Best price guarantee</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">We ensure you get competitive rates in the market, so you can book with confidence knowing you're getting the best deal.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="bg-orange-100 p-3 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20V8l-5 4m10-4v12l5-4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Support 24/7</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Our dedicated team is available 24/7 to assist you with any questions or concerns, ensuring a smooth rental experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Fleet Section -->
+  <section class="py-20 bg-gray-50" id="ride">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Fleet</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Choose from our wide selection of well-maintained vehicles for every need and budget</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Car 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all" data-aos="fade-up">
+          <img src="https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/3-series/gl/2023/890x500-front-cosy-3gl.png" alt="Sedan" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Sedan</h3>
+            <p class="text-gray-600 mb-4">Comfortable and fuel-efficient for city drives</p>
+            <div class="flex justify-between items-center">
+              <span class="text-orange-500 font-bold">₹1,499/day</span>
+              <button class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Car 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1743748290.jpg" alt="SUV" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">SUV</h3>
+            <p class="text-gray-600 mb-4">Spacious and powerful for family trips</p>
+            <div class="flex justify-between items-center">
+              <span class="text-orange-500 font-bold">₹2,999/day</span>
+              <button class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Car 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/124839/thar-roxx-exterior-right-front-three-quarter-2.png?isig=0&q=80" alt="Luxury" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Luxury</h3>
+            <p class="text-gray-600 mb-4">Premium vehicles for special occasions</p>
+            <div class="flex justify-between items-center">
+              <span class="text-orange-500 font-bold">₹4,999/day</span>
+              <button class="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER EXPERIENCE SECTION - FIXED -->
+  <section class="py-20 bg-white">
+    <div class="text-center mb-16">
+      <h4 class="text-orange-500 uppercase tracking-wide text-sm font-semibold">
+        Customer Experience
+      </h4>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        We are ensuring the best <br />
+        customer experience
+      </h2>
+    </div>
+
+    <div class="customer-exp-container">
+      <!-- Center Car Image - Background -->
+      <img
+        src="https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/libraryImages/JP025_067WRfefu255frktm8mvvc6n5jd6j4g__mid.jpg"
+        alt="Car top view"
+        class="customer-exp-bg rounded-2xl shadow-lg"
+      />
+
+      <!-- Left Side Items - Now in front -->
+      <div class="customer-exp-left flex flex-col gap-16 md:gap-20">
+        <div class="flex items-center gap-4 animate-fadeInLeft">
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/fluency/48/FF6B35/price-tag.png"
+              class="w-8 h-8"
+              alt="Price Tag"
+            />
+          </div>
+          <p class="text-blue-900 font-semibold text-lg  backdrop-blur-sm p-2 rounded-lg">
+            Competitive pricing
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 animate-fadeInLeft delay-200">
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/color/48/FF6B35/rupee.png"
+              class="w-8 h-8"
+              alt="Rupee"
+            />
+          </div>
+          <p class="text-blue-900 font-semibold text-lg  backdrop-blur-sm p-2 rounded-lg">
+            Easier Rent <br> On Your Budget
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 animate-fadeInLeft delay-300">
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/fluency/48/FF6B35/bank-cards.png"
+              class="w-8 h-8"
+              alt="Bank Cards"
+            />
+          </div>
+          <p class="text-blue-900 font-semibold text-lg  backdrop-blur-sm p-2 rounded-lg">
+            Most Flexible<br> Payment
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Side Items - Now in front -->
+      <div class="customer-exp-right flex flex-col gap-16 md:gap-20 text-right">
+        <div class="flex items-center gap-4 justify-end animate-fadeInRight">
+          <p class="text-blue-900 font-semibold text-lg  backdrop-blur-sm p-2 rounded-lg">
+            The Best Extended <br>
+            Auto Warranties
+          </p>
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/fluency/48/FF6B35/medal.png"
+              class="w-10 h-10"
+              alt="Medal"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 justify-end animate-fadeInRight delay-200">
+          <p class="text-blue-900 font-semibold text-lg  backdrop-blur-sm p-2 rounded-lg">
+            Roadside
+            <br> Assistance 24/7
+          </p>
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/fluency/48/FF6B35/headset.png"
+              class="w-8 h-8"
+              alt="Headset"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 justify-end animate-fadeInRight delay-300">
+          <p class="text-blue-900 font-semibold text-lg backdrop-blur-sm p-2 rounded-lg">
+            Easy Pickup & Return
+          </p>
+          <div class="bg-white shadow-md p-4 rounded-lg border border-gray-100">
+            <img
+              src="https://img.icons8.com/fluency/48/FF6B35/car.png"
+              class="w-8 h-8"
+              alt="Car"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="flex flex-col md:flex-row items-center justify-center px-6 md:px-16 py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-3xl max-w-6xl mx-auto shadow-lg mb-20">
+    <!-- Left Side -->
+    <div class="md:w-1/2 space-y-6 text-center md:text-left animate-fadeIn">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Download the free <span class="text-white">RentalX</span> app</h1>
+      <p class="text-lg opacity-90">
+        Download the RentalX app to manage your bookings, find exclusive deals, 
+        and access 24/7 support, all from your mobile device.
+      </p>
+
+      <div class="flex justify-center md:justify-start gap-4">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="h-12 cursor-pointer hover:scale-105 transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-12 cursor-pointer hover:scale-105 transition">
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center animate-slideIn">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRirqLcwHxUsxsbAOd3LSPwHwR8qapVQPUuBg&s" alt="Phone Mockup" class="w-82 md:w-96 drop-shadow-4xl hover:scale-105 transition">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8" id="contact">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <!-- Our Products -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Our Products</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Career</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Hotels</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Cars</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Packages</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Features</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Priceline</a></li>
+        </ul>
+      </div>
+
+      <!-- About Rent Cars -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">About Rent Cars</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Why Rent Cars</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Our Story</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Investors</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Press Centers</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Advertise</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Download</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Help Centers</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Guides</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Partner Network</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Mechanics</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Developer</a></li>
+        </ul>
+      </div>
+
+      <!-- Extras -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Extras</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Rental Deal</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Repair Shop</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">View Booking</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">Hire Companies</a></li>
+          <li><a href="#" class="hover:text-orange-500 transition-colors">New Offers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <h4 class="text-2xl font-bold">Rent<span class="text-blue-500">Cars</span></h4>
+        <p class="text-gray-400 mt-2">Copyright © 2024 Rent Cars. All rights reserved.</p>
+      </div>
+      <ul class="flex space-x-6">
+        <li>
+          <a href="https://Facebook.com/" class="text-gray-400 hover:text-orange-500 transition-colors text-xl">
+            <i class="ri-facebook-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/" class="text-gray-400 hover:text-orange-500 transition-colors text-xl">
+            <i class="ri-github-line"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="text-gray-400 hover:text-orange-500 transition-colors text-xl">
+            <i class="ri-instagram-fill"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nitesh-tripathi-3aa25a316/" class="text-gray-400 hover:text-orange-500 transition-colors text-xl">
+            <i class="ri-linkedin-fill"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js">
+  
+  </script>
+
+</body>
+</html>
